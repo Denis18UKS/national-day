@@ -1,0 +1,10 @@
+2024-11-01T18:47:19.067Z - Received request to create news: {"title":"wddwdw","content":"wdwdwd"}
+2024-11-01T18:47:19.070Z - Error creating news: Cannot read properties of undefined (reading 'id')
+2024-11-01T19:05:56.593Z - Received request to create news: {"title":"wdwddw","content":"wddwwdwd"}
+2024-11-01T19:05:56.596Z - Error creating news: Cannot read properties of undefined (reading 'id')
+2024-11-01T19:12:08.058Z - Received request to create news: {"title":"cssccs","content":"cscscscs"}
+2024-11-01T19:12:08.061Z - Error creating news: Cannot read properties of undefined (reading 'id')
+2024-11-01T19:24:15.240Z - Received request to create news: {"title":"wdwdw","content":"dwdwdwdwdw","author_id":null}
+2024-11-01T19:24:15.241Z - Creation failed: Title, content or author_id is missing.
+2024-11-01T19:27:02.595Z - Received request to create news: {"title":"вцвцвцвц","content":"вцвцвцвцвцвввццццццццццццццццццццццццццццццццццццццццццццццццццццццвцццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццвццввцвцввццввцвцвцвццвйцйцвйвццйв","author_id":"2"}
+2024-11-01T19:27:02.635Z - News created: 1 - вцвцвцвц
