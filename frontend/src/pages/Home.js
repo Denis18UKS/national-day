@@ -33,22 +33,23 @@ function Home() {
         if (filter === 'news') {
             return news.map((item) => (
                 <div key={item.id} className="news-item">
-                    <h3>{item.title}</h3>
-                    <p>{item.content}</p>
-                    <p><strong>Автор:</strong> {item.author.name}</p> {/* Предполагается, что у вас есть информация о пользователе */}
+                    <h3>Название: {item.title}</h3>
+                    <p>Описание:<br></br> {item.content}</p>
+                    <p><strong>Автор:</strong> {item.author ? item.author.name : 'Неизвестно'}</p> {/* Проверка на наличие автора */}
                 </div>
             ));
         } else if (filter === 'events') {
             return events.map((item) => (
                 <div key={item.id} className="event-item">
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
+                    <h3>Название: {item.title}</h3>
+                    <p>Описание: {item.description}</p>
                     <p><strong>Дата:</strong> {item.start_date} - {item.end_date}</p>
-                    <p><strong>Организатор:</strong> {item.organizer.name}</p> {/* Предполагается, что у вас есть информация о пользователе */}
+                    <p><strong>Организатор:</strong> {item.organizer ? item.organizer.name : 'Неизвестно'}</p> {/* Проверка на наличие организатора */}
                 </div>
             ));
         }
     };
+
 
     return (
         <div>

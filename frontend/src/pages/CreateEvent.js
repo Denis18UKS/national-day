@@ -12,25 +12,41 @@ function CreateEvent() {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
+        console.log('Отправка формы с данными:', {
+            title,
+            description,
+            address,
+            startDate,
+            startTime,
+            endTime,
+            organizer_id: localStorage.getItem('userId')
+        });
+
         if (!title || !description || !address || !startDate || !startTime || !endTime) {
             alert('Пожалуйста, заполните все поля');
             return;
         }
 
         const organizer_id = localStorage.getItem('userId');
+        if (!organizer_id) {
+            alert("Идентификатор организатора не найден.");
+            return;
+        }
 
         try {
-            await axios.post('http://localhost:5000/api/events/create',
-                {
-                    title,
-                    description,
-                    address,
-                    start_date: startDate,
-                    start_time: startTime,
-                    end_time: endTime
-                });
+            const response = await axios.post('http://localhost:5000/api/events/create', {
+                title,
+                description,
+                address,
+                start_date: startDate,
+                start_time: startTime,
+                end_time: endTime,
+                organizer_id
+            });
 
-            if (response.status === 201) {
+            console.log('Ответ сервера:', response);
+
+            if (response.status === 201 || response.status === 200) {
                 alert('Заявка отправлена');
                 setTitle('');
                 setDescription('');
@@ -50,12 +66,38 @@ function CreateEvent() {
     return (
         <div>
             <h2>Подать заявку</h2>
-            <input type="text" placeholder="Название" value={title} onChange={(e) => setTitle(e.target.value)} />
-            <textarea placeholder="Описание" value={description} onChange={(e) => setDescription(e.target.value)} />
-            <input type="text" placeholder="Адрес" value={address} onChange={(e) => setAddress(e.target.value)} />
-            <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} />
-            <input type="time" value={startTime} onChange={(e) => setStartTime(e.target.value)} />
-            <input type="time" value={endTime} onChange={(e) => setEndTime(e.target.value)} />
+            <input
+                type="text"
+                placeholder="Название"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+            />
+            <textarea
+                placeholder="Описание"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+            />
+            <input
+                type="text"
+                placeholder="Адрес"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+            />
+            <input
+                type="date"
+                value={startDate}
+                onChange={(e) => setStartDate(e.target.value)}
+            />
+            <input
+                type="time"
+                value={startTime}
+                onChange={(e) => setStartTime(e.target.value)}
+            />
+            <input
+                type="time"
+                value={endTime}
+                onChange={(e) => setEndTime(e.target.value)}
+            />
             <button onClick={handleSubmit}>Подать заявку</button>
         </div>
     );
