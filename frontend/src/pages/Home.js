@@ -9,7 +9,7 @@ function Home() {
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/news'); // Предполагается, что ваш API возвращает список новостей
+                const response = await axios.get('http://localhost:5000/api/news/all'); // Предполагается, что ваш API возвращает список новостей
                 setNews(response.data);
             } catch (error) {
                 console.error('Ошибка при загрузке новостей:', error);
@@ -18,7 +18,7 @@ function Home() {
 
         const fetchEvents = async () => {
             try {
-                const response = await axios.get('/api/events'); // Предполагается, что ваш API возвращает список мероприятий
+                const response = await axios.get('http://localhost:5000/api/events/all'); // Предполагается, что ваш API возвращает список мероприятий
                 setEvents(response.data);
             } catch (error) {
                 console.error('Ошибка при загрузке мероприятий:', error);

@@ -8,3 +8,17 @@
 2024-11-01T19:24:15.241Z - Creation failed: Title, content or author_id is missing.
 2024-11-01T19:27:02.595Z - Received request to create news: {"title":"вцвцвцвц","content":"вцвцвцвцвцвввццццццццццццццццццццццццццццццццццццццццццццццццццццццвцццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццццвццввцвцввццввцвцвцвццвйцйцвйвццйв","author_id":"2"}
 2024-11-01T19:27:02.635Z - News created: 1 - вцвцвцвц
+2024-11-02T01:55:05.615Z - Received request to create news: {"title":"вцвцвц","content":"цввцвццввц","author_id":"2"}
+2024-11-02T01:55:05.672Z - News created: 2 - вцвцвц
+2024-11-02T01:56:17.914Z - Retrieved all news: 2 items
+2024-11-02T01:56:33.757Z - Retrieved all news: 2 items
+2024-11-02T02:01:49.155Z - Retrieved all news: 2 items
+2024-11-02T02:01:52.171Z - Retrieved all news: 2 items
+2024-11-02T02:01:55.157Z - Retrieved all news: 2 items
+2024-11-02T02:02:10.655Z - Retrieved all news: 2 items
+2024-11-02T02:02:11.923Z - Retrieved all news: 2 items
+2024-11-02T02:02:13.799Z - Retrieved all news: 2 items
+2024-11-02T02:02:56.152Z - Retrieved all news: 2 items
+2024-11-02T02:03:01.164Z - Retrieved all news: 2 items
+2024-11-02T02:03:02.781Z - Retrieved all news: 2 items
+2024-11-02T02:03:07.139Z - Retrieved all news: 2 items

@@ -3,9 +3,12 @@ const Event = require('../models/Event');
 // Создание заявки
 exports.createEvent = async (req, res) => {
     try {
-        const { title, description, address, start_date, start_time, end_time } = req.body;
-        const organizer_id = req.user.id;
-
+        const { title, description, address, start_date, start_time, end_time, organizer_id } = req.body;
+        // Проверка на наличие обязательных полей
+        if (!title || !description || !address || !start_date || !start_time || !end_time || !organizer_id) {
+            return res.status(400).json({ error: 'Все поля должны быть заполнены' });
+        }
+        
         const event = await Event.create({ title, description, address, start_date, start_time, end_time, organizer_id });
         res.json({ message: 'Заявка отправлена', event });
     } catch (error) {

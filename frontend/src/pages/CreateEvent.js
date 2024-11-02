@@ -9,12 +9,41 @@ function CreateEvent() {
     const [startTime, setStartTime] = useState('');
     const [endTime, setEndTime] = useState('');
 
-    const handleSubmit = async () => {
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        if (!title || !description || !address || !startDate || !startTime || !endTime) {
+            alert('Пожалуйста, заполните все поля');
+            return;
+        }
+
+        const organizer_id = localStorage.getItem('userId');
+
         try {
-            await axios.post('http://localhost:5000/api/events/create', { title, description, address, start_date: startDate, start_time: startTime, end_time: endTime });
-            alert('Заявка отправлена');
+            await axios.post('http://localhost:5000/api/events/create',
+                {
+                    title,
+                    description,
+                    address,
+                    start_date: startDate,
+                    start_time: startTime,
+                    end_time: endTime
+                });
+
+            if (response.status === 201) {
+                alert('Заявка отправлена');
+                setTitle('');
+                setDescription('');
+                setAddress('');
+                setStartDate('');
+                setStartTime('');
+                setEndTime('');
+            } else {
+                alert('Произошла ошибка при подаче заявки');
+            }
         } catch (error) {
             console.error('Ошибка отправки заявки', error);
+            alert('Произошла ошибка при подаче заявки');
         }
     };
 
