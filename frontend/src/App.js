@@ -1,5 +1,4 @@
-// App.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
@@ -12,23 +11,38 @@ import ApplicationHistory from './pages/ApplicationHistory';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [userRole, setUserRole] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const storedRole = localStorage.getItem('userRole');
+    const storedUserId = localStorage.getItem('userId');
+    if (storedUserId) {
+      setIsAuthenticated(true);
+      setUserRole(storedRole);
+    }
+  }, []);
 
   const handleLogout = () => {
     setIsAuthenticated(false);
+    setUserRole(null);
+    localStorage.removeItem('userId');
+    localStorage.removeItem('userRole');
     navigate('/login');
   };
 
   return (
     <>
-      <Sidebar isAuthenticated={isAuthenticated} onLogout={handleLogout} />
+      <Sidebar isAuthenticated={isAuthenticated} userRole={userRole} onLogout={handleLogout} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
+        <Route
+          path="/login"
+          element={<Login setIsAuthenticated={setIsAuthenticated} setUserRole={setUserRole} />}
+        />
         <Route path="/events" element={<Events />} />
 
-        {/* Новые маршруты для авторизованных пользователей */}
         {isAuthenticated && (
           <>
             <Route path="/create-news" element={<CreateNews />} />

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './CreateNews.css'; // Импортируем стили
 
 function CreateNews() {
     const [title, setTitle] = useState('');
@@ -41,7 +42,7 @@ function CreateNews() {
     };
 
     return (
-        <div>
+        <div className="create-news-container">
             <h2>Создание новости</h2>
             <form onSubmit={handleSubmit}>
                 <input
@@ -49,13 +50,15 @@ function CreateNews() {
                     placeholder="Название"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
+                    className="input-field"
                 />
                 <textarea
                     placeholder="Описание"
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
+                    className="input-field"
                 />
-                <button type="submit">Создать новость</button>
+                <button type="submit" className="submit-button">Создать новость</button>
             </form>
         </div>
     );

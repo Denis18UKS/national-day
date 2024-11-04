@@ -1,0 +1,51 @@
+/* CreateEvent.css */
+
+.create-event-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical; /* Разрешаем изменение высоты текстовой области */
+}
+
+.submit-button {
+    background-color: #007bff; /* Цвет кнопки */
+    color: #fff; /* Цвет текста кнопки */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #0056b3; /* Цвет кнопки при наведении */
+}
+
+@media (max-width: 600px) {
+    .create-event-container {
+        width: 90%;
+    }
+}

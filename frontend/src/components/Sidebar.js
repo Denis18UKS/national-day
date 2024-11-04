@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Sidebar.css';
 
-function Sidebar({ isAuthenticated, onLogout }) {
+function Sidebar({ isAuthenticated, userRole, onLogout }) {
     return (
-        <nav>
+        <nav className="sidebar">
             <ul>
                 <li><Link to="/">Главная</Link></li>
                 {isAuthenticated ? (
@@ -12,7 +13,10 @@ function Sidebar({ isAuthenticated, onLogout }) {
                         <li><Link to="/create-news">Создать новость</Link></li>
                         <li><Link to="/submit-application">Подать заявку</Link></li>
                         <li><Link to="/application-history">История заявок</Link></li>
-                        <li><button onClick={onLogout}>Выйти</button></li>
+                        {userRole === 'admin' && (
+                            <li><Link to="/admin-events">Заявки</Link></li>
+                        )}
+                        <li><button className="logout-button" onClick={onLogout}>Выйти</button></li>
                     </>
                 ) : (
                     <>

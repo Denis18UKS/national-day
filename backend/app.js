@@ -2,8 +2,9 @@
 const express = require('express');
 const sequelize = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
-const newsRoutes = require('./routes/newsRoutes'); // Подключаем маршруты новостей
+const newsRoutes = require('./routes/newsRoutes');
 const eventRoutes = require('./routes/eventRoutes'); // Подключаем маршруты событий
+const userRoutes = require('./routes/userRoutes');
 require('dotenv').config();
 const session = require('express-session');
 const cors = require('cors'); // Подключаем cors
@@ -13,26 +14,27 @@ app.use(express.json());
 
 // Настройка CORS
 app.use(cors({
-  origin: 'http://localhost:3000', // Разрешаем запросы с вашего фронтенда
-  credentials: true, // Разрешаем использование куки
+    origin: 'http://localhost:3000', // Разрешаем запросы с вашего фронтенда
+    credentials: true, // Разрешаем использование куки
 }));
 
 // Настройка сессий
 app.use(session({
-  secret: 'ff76c554aa496486ca40a4048d138a963f010016682136d5f', // Замените на свой секретный ключ
-  resave: false,
-  saveUninitialized: true,
-  cookie: { secure: false } // Установите в true, если используете HTTPS
+    secret: 'ff76c554aa496486ca40a4048d138a963f010016682136d5f', // Замените на свой секретный ключ
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false } // Установите в true, если используете HTTPS
 }));
 
 // Использование маршрутов
 app.use('/api/auth', authRoutes);
 app.use('/api/news', newsRoutes); // Добавляем маршруты для новостей
 app.use('/api/events', eventRoutes); // Добавляем маршруты для событий
+app.use('/api/user', userRoutes); // Добавляем маршруты для пользователей
 
 // Проверка подключения к базе данных и запуск сервера
 sequelize.sync().then(() => {
-  app.listen(5000, () => console.log('Сервер запущен на http://localhost:5000'));
+    app.listen(5000, () => console.log('Сервер запущен на http://localhost:5000'));
 }).catch(err => {
-  console.error('Ошибка подключения к базе данных:', err);
+    console.error('Ошибка подключения к базе данных:', err);
 });

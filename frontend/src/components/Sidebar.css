@@ -1,0 +1,46 @@
+/* Sidebar.css */
+
+.sidebar {
+    width: 250px; /* Ширина боковой панели */
+    background-color: #f8f9fa; /* Цвет фона */
+    padding: 20px;
+    border-right: 1px solid #dee2e6; /* Легкая граница справа */
+    height: 100vh; /* Полная высота */
+    position: fixed; /* Фиксированное положение */
+    top: 0;
+    left: 0;
+}
+
+.sidebar ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
+
+.sidebar li {
+    margin: 15px 0; /* Отступы между элементами списка */
+}
+
+.sidebar a {
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    color: #343a40; /* Цвет текста */
+    font-weight: 500; /* Полужирный шрифт */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.sidebar a:hover {
+    color: #007bff; /* Цвет при наведении */
+}
+
+.logout-button {
+    background: none; /* Убираем фон кнопки */
+    border: none; /* Убираем границы кнопки */
+    color: #dc3545; /* Цвет текста кнопки выхода */
+    cursor: pointer; /* Указатель при наведении */
+    font: inherit; /* Унаследовать шрифт родителя */
+    text-decoration: underline; /* Подчеркиваем текст кнопки */
+    padding: 0; /* Убираем отступы */
+}
+
+.logout-button:hover {
+    color: #c82333; /* Цвет при наведении на кнопку выхода */
+}

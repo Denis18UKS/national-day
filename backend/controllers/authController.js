@@ -46,6 +46,9 @@ exports.login = async (req, res) => {
         const token = jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET);
         logToFile(`User logged in: ${username}`);
 
+        // Сохраняем токен в сессии
+        req.session.token = token;
+
         // Возвращаем ID пользователя вместе с токеном
         res.json({ message: 'Login successful', token, userId: user.id });
     } catch (error) {

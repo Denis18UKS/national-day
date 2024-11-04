@@ -1,0 +1,35 @@
+/* Events.css */
+
+.events-container {
+    max-width: 800px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 20px; /* Отступы внутри контейнера */
+}
+
+.event-item {
+    border: 1px solid #ddd; /* Граница карточки */
+    border-radius: 8px; /* Скругление углов */
+    padding: 15px; /* Отступы внутри карточки */
+    margin: 10px 0; /* Отступы между карточками */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень для карточки */
+    transition: transform 0.2s; /* Плавный переход для эффекта наведения */
+}
+
+.event-item:hover {
+    transform: scale(1.02); /* Увеличение карточки при наведении */
+}
+
+.event-item h3 {
+    margin: 0 0 10px; /* Отступы для заголовка */
+    font-size: 1.5em; /* Размер шрифта заголовка */
+    color: #333; /* Цвет заголовка */
+}
+
+.event-item p {
+    margin: 5px 0; /* Отступы для абзацев */
+    color: #666; /* Цвет текста */
+}
+
+.event-item strong {
+    color: #333; /* Цвет для выделенного текста */
+}
