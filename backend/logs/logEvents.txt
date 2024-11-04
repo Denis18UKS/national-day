@@ -199,3 +199,43 @@
 2024-11-04T04:53:05.692Z - Retrieved all events: 1 items
 2024-11-04T04:53:07.685Z - Retrieved all events: 1 items
 2024-11-04T04:53:09.161Z - Retrieved all events: 1 items
+2024-11-04T05:29:43.386Z - Retrieved all events: 1 items
+2024-11-04T05:30:42.539Z - Retrieved all events: 1 items
+2024-11-04T05:30:51.917Z - Retrieved all events: 1 items
+2024-11-04T05:31:11.527Z - Received request to create event: {"title":"ddwwd","description":"dwwdwd","address":"wdwd","start_date":"2024-12-12","start_time":"12:12","end_time":"16:16","organizer_id":"3"}
+2024-11-04T05:31:11.578Z - Event successfully created: {"status":"отправлена","id":2,"title":"ddwwd","description":"dwwdwd","address":"wdwd","start_date":"2024-12-12","start_time":"12:12","end_time":"16:16","organizer_id":"3","updatedAt":"2024-11-04T05:31:11.529Z","createdAt":"2024-11-04T05:31:11.529Z"}
+2024-11-04T05:31:15.697Z - Retrieved all events: 2 items
+2024-11-04T05:31:19.068Z - Retrieved all events: 2 items
+2024-11-04T05:32:37.670Z - Retrieved all events: 2 items
+2024-11-04T05:32:41.331Z - Retrieved all events: 2 items
+2024-11-04T05:32:54.320Z - Retrieved all events: 2 items
+2024-11-04T05:33:59.723Z - Retrieved all events: 2 items
+2024-11-04T05:34:00.702Z - Retrieved all events: 2 items
+2024-11-04T05:34:07.465Z - Retrieved all events: 2 items
+2024-11-04T05:34:10.303Z - Retrieved all events: 2 items
+2024-11-04T05:34:17.940Z - Retrieved all events: 2 items
+2024-11-04T05:35:28.947Z - Retrieved all events: 2 items
+2024-11-04T05:35:38.155Z - Retrieved all events: 2 items
+2024-11-04T05:35:49.022Z - Retrieved all events: 2 items
+2024-11-04T05:35:56.095Z - Retrieved all events: 2 items
+2024-11-04T05:35:59.255Z - Retrieved all events: 2 items
+2024-11-04T05:36:20.838Z - Retrieved all events: 2 items
+2024-11-04T05:36:25.160Z - Retrieved all events: 2 items
+2024-11-04T05:39:02.555Z - Received request to create event: {"title":"уруа","description":"цввц","address":"уруа","start_date":"2024-10-31","start_time":"15:15","end_time":"16:16","organizer_id":"3"}
+2024-11-04T05:39:02.588Z - Event successfully created: {"status":"отправлена","id":3,"title":"уруа","description":"цввц","address":"уруа","start_date":"2024-10-31","start_time":"15:15","end_time":"16:16","organizer_id":"3","updatedAt":"2024-11-04T05:39:02.556Z","createdAt":"2024-11-04T05:39:02.556Z"}
+2024-11-04T05:39:10.436Z - Retrieved all events: 3 items
+2024-11-04T05:39:16.986Z - Retrieved all events: 3 items
+2024-11-04T05:39:31.002Z - Retrieved all events: 3 items
+2024-11-04T05:39:40.860Z - Retrieved all events: 3 items
+2024-11-04T05:39:45.722Z - Retrieved all events: 3 items
+2024-11-04T05:39:46.657Z - Retrieved all events: 3 items
+2024-11-04T05:39:50.248Z - Retrieved all events: 3 items
+2024-11-04T05:41:27.169Z - Received request to create event: {"title":"ураа","description":"ураа","address":"ураа","start_date":"2024-11-14","start_time":"12:30","end_time":"18:30","organizer_id":"3"}
+2024-11-04T05:41:27.196Z - Event successfully created: {"status":"отправлена","id":4,"title":"ураа","description":"ураа","address":"ураа","start_date":"2024-11-14","start_time":"12:30","end_time":"18:30","organizer_id":"3","updatedAt":"2024-11-04T05:41:27.170Z","createdAt":"2024-11-04T05:41:27.170Z"}
+2024-11-04T05:41:30.263Z - Retrieved all events: 4 items
+2024-11-04T05:41:45.345Z - Retrieved all events: 4 items
+2024-11-04T05:41:57.925Z - Retrieved all events: 4 items
+2024-11-04T05:42:41.003Z - Retrieved all events: 4 items
+2024-11-04T05:42:42.564Z - Retrieved all events: 4 items
+2024-11-04T05:42:51.248Z - Retrieved all events: 4 items
+2024-11-04T05:43:01.827Z - Retrieved all events: 4 items

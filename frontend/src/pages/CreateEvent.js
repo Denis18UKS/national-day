@@ -10,6 +10,9 @@ function CreateEvent() {
     const [startTime, setStartTime] = useState('');
     const [endTime, setEndTime] = useState('');
 
+    // Получаем текущую дату в формате YYYY-MM-DD
+    const today = new Date().toISOString().split('T')[0];
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -93,6 +96,7 @@ function CreateEvent() {
                     value={startDate}
                     onChange={(e) => setStartDate(e.target.value)}
                     className="input-field"
+                    min={today} // Ограничиваем выбор даты до будущих дат
                 />
                 <input
                     type="time"

@@ -196,3 +196,16 @@
 2024-11-04T04:40:43.017Z - Retrieved all news: 4 items
 2024-11-04T04:41:43.438Z - Retrieved all news: 4 items
 2024-11-04T04:43:21.203Z - Retrieved all news: 4 items
+2024-11-04T05:29:43.376Z - Retrieved all news: 4 items
+2024-11-04T05:29:52.742Z - Received request to create news: {"title":"wdwd","content":"wdwd","author_id":"undefined"}
+2024-11-04T05:29:52.760Z - Error creating news: Incorrect integer value: 'undefined' for column 'author_id' at row 1
+2024-11-04T05:30:48.173Z - Received request to create news: {"title":"wdwd","content":"wdwddw","author_id":"3"}
+2024-11-04T05:30:48.228Z - News created: 5 - wdwd
+2024-11-04T05:30:51.914Z - Retrieved all news: 5 items
+2024-11-04T05:31:19.065Z - Retrieved all news: 5 items
+2024-11-04T05:32:37.668Z - Retrieved all news: 5 items
+2024-11-04T05:36:16.797Z - Received request to create news: {"title":"урарарра","content":"урарарра","author_id":"3"}
+2024-11-04T05:36:16.829Z - News created: 6 - урарарра
+2024-11-04T05:36:20.836Z - Retrieved all news: 6 items
+2024-11-04T05:39:45.721Z - Retrieved all news: 6 items
+2024-11-04T05:43:01.825Z - Retrieved all news: 6 items

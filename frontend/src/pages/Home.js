@@ -48,7 +48,9 @@ function Home() {
                 </div>
             ));
         } else if (filter === 'events') {
-            return events.map((item) => (
+            // Фильтруем мероприятия по статусу
+            const acceptedEvents = events.filter(item => item.status === 'принята');
+            return acceptedEvents.map((item) => (
                 <div key={item.id} className="event-item">
                     <h3>Название: {item.title}</h3>
                     <p>Описание: {item.description}</p>

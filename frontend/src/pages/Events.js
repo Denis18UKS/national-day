@@ -32,7 +32,6 @@ const Events = () => {
         }
     };
 
-
     const renderContent = () => {
         return events.map((item) => (
             <div key={item.id} className="event-item">
@@ -42,17 +41,22 @@ const Events = () => {
                 <p><strong>Дата начала:</strong> {item.start_date}</p>
                 <p><strong>Время начала:</strong> {item.start_time}</p>
                 <p><strong>Время окончания:</strong> {item.end_time}</p>
-                <div>
-                    <button onClick={() => handleStatusUpdate(item.id, 'принято')} className="accept-button">Принять</button>
-                    <button onClick={() => handleStatusUpdate(item.id, 'отклонено')} className="reject-button">Отклонить</button>
-                </div>
+                <p><strong>Статус:</strong> {item.status}</p>
+                
+                {/* Используем логическое И для условного рендеринга кнопок */}
+                {item.status === 'отправлена' && (
+                    <div>
+                        <button onClick={() => handleStatusUpdate(item.id, 'принята')} className="accept-button">Принять</button>
+                        <button onClick={() => handleStatusUpdate(item.id, 'отклонена')} className="reject-button">Отклонить</button>
+                    </div>
+                )}
             </div>
         ));
     };
 
     return (
         <div className="events-container">
-            <h2>События</h2>
+            <h2>Мероприятия</h2>
             {renderContent()}
         </div>
     );
