@@ -44,7 +44,6 @@ function Home() {
                 <div key={item.id} className="news-item">
                     <h3>Название: {item.title}</h3>
                     <p>Описание:<br /> {item.content}</p>
-                    <p><strong>Автор:</strong> {item.author ? item.author.username : 'Неизвестно'}</p>
                 </div>
             ));
         } else if (filter === 'events') {
